@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements
                 String stringId = Integer.toString(id);
                 Uri uri = TaskContract.TaskEntry.CONTENT_URI;
                 uri = uri.buildUpon().appendPath(stringId).build();
-                
+
 
                 // TODO (2) Delete a single row of data using a ContentResolver
                 getContentResolver().delete(uri,null,null);

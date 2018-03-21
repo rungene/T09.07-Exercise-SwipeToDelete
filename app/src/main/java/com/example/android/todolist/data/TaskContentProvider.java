@@ -25,7 +25,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 
+import static android.provider.BaseColumns._ID;
 import static com.example.android.todolist.data.TaskContract.TaskEntry.TABLE_NAME;
 
 // Verify that TaskContentProvider extends from ContentProvider and implements required methods
@@ -191,8 +193,45 @@ public class TaskContentProvider extends ContentProvider {
     @Override
     public int update(@NonNull Uri uri, ContentValues values, String selection,
                       String[] selectionArgs) {
+        // Get access to the database and write URI matching code to recognize a single item
+        final SQLiteDatabase db = mTaskDbHelper.getWritableDatabase();
 
-        throw new UnsupportedOperationException("Not yet implemented");
+        int match = sUriMatcher.match(uri);
+
+        int rowsUpdated = 0;
+
+        switch (match){
+            case TASKS:
+                rowsUpdated =db.update(TABLE_NAME,
+                        values,
+                        selection,
+                        selectionArgs
+                        );
+
+            case TASK_WITH_ID:
+                String id = uri.getPathSegments().get(1);
+                if (TextUtils.isEmpty(selection)){
+                    rowsUpdated = db.update(TABLE_NAME,
+                            values,
+                            _ID+"="+id,
+                            null);
+                }else {
+                    rowsUpdated = db.update(TABLE_NAME,
+                            values,
+                            _ID+"="+id+" and "+selection,
+                            selectionArgs);
+                }
+                break;
+                default:
+                    throw new UnsupportedOperationException("Unknown URI"+ uri);
+
+        }
+        getContext().getContentResolver().notifyChange(uri,null);
+
+
+        return rowsUpdated;
+
+
     }
 
 
