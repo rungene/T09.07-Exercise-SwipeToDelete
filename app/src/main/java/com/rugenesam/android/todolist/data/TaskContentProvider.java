@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.example.android.todolist.data;
+package com.rugenesam.android.todolist.data;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -28,7 +28,7 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 import static android.provider.BaseColumns._ID;
-import static com.example.android.todolist.data.TaskContract.TaskEntry.TABLE_NAME;
+import static com.rugenesam.android.todolist.data.TaskContract.TaskEntry.TABLE_NAME;
 
 // Verify that TaskContentProvider extends from ContentProvider and implements required methods
 public class TaskContentProvider extends ContentProvider {

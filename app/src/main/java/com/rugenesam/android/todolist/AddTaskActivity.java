@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.example.android.todolist;
+package com.rugenesam.android.todolist;
 
 import android.content.ContentValues;
 import android.net.Uri;
@@ -25,7 +25,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.android.todolist.data.TaskContract;
+import com.rugenesam.android.todolist.data.TaskContract;
 
 
 public class AddTaskActivity extends AppCompatActivity {

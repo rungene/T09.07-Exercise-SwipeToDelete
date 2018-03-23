@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.android.todolist">
+    package="com.rugenesam.android.todolist">
 
     <application
         android:allowBackup="false"
@@ -12,7 +12,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <!-- The manifest entry for the MainActivity -->
-        <activity android:name="com.example.android.todolist.MainActivity">
+        <activity android:name="com.rugenesam.android.todolist.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,15 +22,15 @@
 
         <!-- AddTaskActivity -->
         <activity
-            android:name="com.example.android.todolist.AddTaskActivity"
+            android:name="com.rugenesam.android.todolist.AddTaskActivity"
             android:label="@string/add_task_activity_name" />
 
         <!-- Register the TaskContentProvider -->
         <!-- Set name, authorities, and exported attributes -->
         <!-- exported = false limits access to this ContentProvider to only this app -->
         <provider
-            android:name="com.example.android.todolist.data.TaskContentProvider"
-            android:authorities="com.example.android.todolist"
+            android:name="com.rugenesam.android.todolist.data.TaskContentProvider"
+            android:authorities="com.rugenesam.android.todolist"
             android:exported="false"/>
 
     </application>

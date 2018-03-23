@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.example.android.todolist;
+package com.rugenesam.android.todolist;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -31,7 +31,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 
-import com.example.android.todolist.data.TaskContract;
+import com.rugenesam.android.todolist.data.TaskContract;
 
 
 public class MainActivity extends AppCompatActivity implements

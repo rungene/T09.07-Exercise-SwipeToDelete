@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.example.android.todolist.utils;
+package com.rugenesam.android.todolist.utils;
 
 import junit.framework.Assert;
 

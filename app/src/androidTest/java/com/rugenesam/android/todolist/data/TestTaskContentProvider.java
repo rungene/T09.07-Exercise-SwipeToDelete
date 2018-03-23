@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.example.android.todolist.data;
+package com.rugenesam.android.todolist.data;
 
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -29,10 +29,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
-
-import com.example.android.todolist.data.TaskContentProvider;
-import com.example.android.todolist.data.TaskContract;
-import com.example.android.todolist.data.TaskDbHelper;
 
 import org.junit.Before;
 import org.junit.Test;
