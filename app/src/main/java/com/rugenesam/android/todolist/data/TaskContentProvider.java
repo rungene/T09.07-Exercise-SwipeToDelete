@@ -59,6 +59,7 @@ public class TaskContentProvider extends ContentProvider {
         uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS + "/#", TASK_WITH_ID);
 
         return uriMatcher;
+        
     }
 
     // Member variable for a TaskDbHelper that's initialized in the onCreate() method
